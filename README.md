@@ -1,14 +1,49 @@
-# Flutter Quiz Knowledge
+# E-Commerce Complate App - Flutter UI 
+
+In the first part of our complete e-commerce app, we show you how you can create a nice clean onboarding screen for your e-commerce app that can run both Andriod and iOS devices because it builds with flutter. Then on the second episode, we build a Sign in, Forgot Password screen with a custom error indicator. The third Episode contains Sign Up and OTP screen. The fourth episode is the most exciting episode because we build our home page on this episode than on the fifth episode we work on our product page, last not least on the 6th episode we build an order screen which has some cool stuff like swipe to remove. At the end 7th episode we build a profile screen. 
+
+## [Watch it on YouTube](https://youtube.com/playlist?list=PLxUBb2A_UUy8OlaNZpS2mfL8xpHcnd_Af)
+
+**Packages we are using:**
+
+- flutter_svg: [link](https://pub.dev/packages/flutter_svg)
 
 
-|<img width="422" alt="Screen Shot 2020-06-07 at 17 12 30" src="https://user-images.githubusercontent.com/49479782/83966794-a99ffb80-a8e6-11ea-9619-07f2fa8cac86.png">
+### Video Preview of Final UI
 
+![Preview](/intro.gif)
 
- | <img width="406" alt="Screen Shot 2020-06-07 at 17 09 57" src="https://user-images.githubusercontent.com/49479782/83966192-f84b9680-a8e2-11ea-85c2-f26bb1a33daf.png">
- | 
-<img width="410" alt="Screen Shot 2020-06-07 at 17 12 43" src="https://user-images.githubusercontent.com/49479782/83966212-13b6a180-a8e3-11ea-8ec2-cc7ed9298160.png"> | 
-<img width="405" alt="Screen Shot 2020-06-07 at 17 13 23" src="https://user-images.githubusercontent.com/49479782/83966213-187b5580-a8e3-11ea-82f3-2e432930a8bc.png">
- |
-<img width="406" alt="Screen Shot 2020-06-07 at 17 14 10" src="https://user-images.githubusercontent.com/49479782/83966238-38127e00-a8e3-11ea-91e4-63353de5cd5c.png"> |<img width="406" alt="Screen Shot 2020-06-07 at 17 14 19" src="https://user-images.githubusercontent.com/49479782/83966240-3c3e9b80-a8e3-11ea-9328-a9e74dddb931.png"> |
-<img width="402" alt="Screen Shot 2020-06-07 at 17 14 41" src="https://user-images.githubusercontent.com/49479782/83966241-3e085f00-a8e3-11ea-869b-c826489a300a.png"> |<img width="406" alt="Screen Shot 2020-06-07 at 17 14 55" src="https://user-images.githubusercontent.com/49479782/83966242-3ea0f580-a8e3-11ea-85e9-40b864f9b5dc.png"> |<img width="410" alt="Screen Shot 2020-06-07 at 17 15 07" src="https://user-images.githubusercontent.com/49479782/83966246-419be600-a8e3-11ea-9862-0af7adae2d65.png"> |
-<img width="407" alt="Screen Shot 2020-06-07 at 17 15 29" src="https://user-images.githubusercontent.com/49479782/83966248-42cd1300-a8e3-11ea-9c15-249bb499fa07.png">
+## Screens it contains:
+
+=> Onboarding
+
+=> Login
+
+=> Forgot Password
+
+=> Sign Up
+
+=> Complete Profile
+
+=> OTP Verification
+
+=> Home Page
+
+=> Product Details
+
+=> Order
+
+=> Profile (added)
+
+=> Bottom Navigation Bar (added)
+
+Now it contains all the screen, thanks for your love and support 🙏 
+
+## Photos
+![Preview](/1.png)
+![Preview](2.png)
+![Preview](3.png)
+![Preview](4.png)
+![Preview](5.png)
+![Preview](6.png)
+![Preview](7.png)

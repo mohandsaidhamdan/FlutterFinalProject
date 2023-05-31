@@ -1,23 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutterquiz/provider/question_provider.dart';
-import 'package:flutterquiz/provider/score_provider.dart';
-import 'package:flutterquiz/screen/dashboard.dart';
-import 'package:flutterquiz/util/router.dart';
-import 'package:flutterquiz/util/router_path.dart';
-import 'package:provider/provider.dart';
+import 'package:shop_app/routes.dart';
+import 'package:shop_app/screens/profile/profile_screen.dart';
+import 'package:shop_app/screens/splash/splash_screen.dart';
+import 'package:shop_app/theme.dart';
 
 void main() {
-  runApp(MultiProvider(
-    providers: [
-      ChangeNotifierProvider(
-        create: (BuildContext context) => QuestionProvider(),
-      ),
-      ChangeNotifierProvider(
-        create: (_) => ScoreProvider(),
-      )
-    ],
-    child: MyApp(),
-  ));
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -25,10 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      onGenerateRoute: Routerr.generateRouter,
-      initialRoute: SplashScreen,
+      title: 'Flutter Demo',
+      theme: theme(),
+      // home: SplashScreen(),
+      // We use routeName so that we dont need to remember the name
+      initialRoute: SplashScreen.routeName,
+      routes: routes,
     );
   }
 }
