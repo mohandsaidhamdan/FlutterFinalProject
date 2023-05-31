@@ -3,6 +3,7 @@ import 'package:flutterquiz/model/question.dart';
 import 'package:flutterquiz/provider/question_provider.dart';
 import 'package:flutterquiz/screen/quiz_screen.dart';
 import 'package:flutterquiz/util/constant.dart';
+import 'package:flutterquiz/widget/button.dart';
 import 'package:flutterquiz/widget/snackbar.dart';
 import 'package:provider/provider.dart';
 
@@ -10,8 +11,7 @@ class QuizBottomSheet extends StatefulWidget {
   final String title;
   final int id;
 
-  const QuizBottomSheet(
-      {Key key, @required this.title, this.id})
+  const QuizBottomSheet({Key key, @required this.title, this.id})
       : super(key: key);
 
   @override
@@ -33,7 +33,8 @@ class _QuizBottomSheetState extends State<QuizBottomSheet> {
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.only(topLeft: Radius.circular(40),topRight: Radius.circular(40)),
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(40), topRight: Radius.circular(40)),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -83,25 +84,16 @@ class _QuizBottomSheetState extends State<QuizBottomSheet> {
               height: 30,
             ),
             Center(child: Consumer<QuestionProvider>(
-              builder: (BuildContext context, QuestionProvider value, Widget child) {
+              builder:
+                  (BuildContext context, QuestionProvider value, Widget child) {
                 return value.isLoading
                     ? CircularProgressIndicator()
                     : Visibility(
-                      visible: value.isLoading ? false : true,
-                      child: RaisedButton(
-                          color: kItemSelectBottomNav,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15)),
-                          onPressed: () => _startQuiz(value),
-                          child: Text(
-                            "Start Quiz",
-                            style: kHeadingTextStyleAppBar.copyWith(
-                              color: Colors.white,
-                              fontSize: 16,
-                            ),
-                          ),
-                        ),
-                    );
+                        visible: value.isLoading ? false : true,
+                        child: Button(
+                          title: "Start Quiz",
+                          //onPressed: () => _startQuiz(value),
+                        ));
               },
             )),
           ],
@@ -195,9 +187,8 @@ class _QuizBottomSheetState extends State<QuizBottomSheet> {
 
       if (listQuestion.length == 0) {
         final snackBar = SnackBar(content: Text("Not found question"));
-        globalKey.currentState.showSnackBar(snackBar);
+        //  globalKey.currentState.showSnackBar(snackBar);
       } else {
-
         Navigator.pop(context); // close show bottom sheet
         Navigator.push(
           context,
@@ -209,7 +200,6 @@ class _QuizBottomSheetState extends State<QuizBottomSheet> {
             ),
           ),
         );
-
       }
     } else {
       final snackBar = SnackBar(
@@ -219,7 +209,7 @@ class _QuizBottomSheetState extends State<QuizBottomSheet> {
           'Please choose option!',
         ),
       );
-      globalKey.currentState.showSnackBar(snackBar);
+      //   globalKey.currentState.showSnackBar(snackBar);
     }
   }
 }

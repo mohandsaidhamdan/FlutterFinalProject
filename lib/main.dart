@@ -6,19 +6,18 @@ import 'package:flutterquiz/util/router.dart';
 import 'package:flutterquiz/util/router_path.dart';
 import 'package:provider/provider.dart';
 
-void main() {runApp(
-    MultiProvider(providers: [
+void main() {
+  runApp(MultiProvider(
+    providers: [
       ChangeNotifierProvider(
-        create: (BuildContext context) => QuestionProvider() ,
+        create: (BuildContext context) => QuestionProvider(),
       ),
       ChangeNotifierProvider(
-        create: (_)=>ScoreProvider(),
+        create: (_) => ScoreProvider(),
       )
     ],
-      child: MyApp(),
-    )
-);
-
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
